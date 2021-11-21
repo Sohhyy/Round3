@@ -123,7 +123,7 @@ public class CoinManager : MonoBehaviour
                 }
                 else if (index >= 5)
                 {
-                    Instantiate(Knife, new Vector3(Random.Range(Left.transform.position.x, Right.transform.position.x), 10, 0), Quaternion.Euler(rotationVector));
+                    Instantiate(Knife, new Vector3(Random.Range(Left.transform.position.x, Right.transform.position.x), 10, 0), transform.rotation);
                 }
                 yield return new WaitForSeconds(1.5f);
             }
@@ -136,7 +136,7 @@ public class CoinManager : MonoBehaviour
                 }
                 else if (index >= 5)
                 {
-                    Instantiate(LargeKnife, new Vector3(Random.Range(Left.transform.position.x, Right.transform.position.x), 10, 0), Quaternion.Euler(rotationVector));
+                    Instantiate(LargeKnife, new Vector3(Random.Range(Left.transform.position.x, Right.transform.position.x), 10, 0), transform.rotation);
                 }
                 yield return new WaitForSeconds(1f);
             }

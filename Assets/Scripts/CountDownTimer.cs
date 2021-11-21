@@ -11,9 +11,11 @@ public class CountDownTimer : MonoBehaviour
     float _gameTimeNow;
     StartControl startFlag;
     bool changefastBGM;
+    bool playtensecond;
     void Start()
     {
         changefastBGM = true;
+        playtensecond = true;
         _gameTimeNow = gameTime;
         gameTimeText.text = _gameTimeNow.ToString();
     }
@@ -41,6 +43,11 @@ public class CountDownTimer : MonoBehaviour
         {
             changefastBGM = false;
             SoundMgr.Instance.PlayBGM(7);
+        }
+        if (_gameTimeNow <= 10 && playtensecond)
+        {
+            playtensecond = false;
+            SoundMgr.Instance.PlaySound(11);
         }
     }
 
