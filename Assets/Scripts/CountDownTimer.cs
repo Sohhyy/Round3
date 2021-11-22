@@ -44,7 +44,7 @@ public class CountDownTimer : MonoBehaviour
             changefastBGM = false;
             SoundMgr.Instance.PlayBGM(7);
         }
-        if (_gameTimeNow <= 10 && playtensecond)
+        if (_gameTimeNow <= 12 && playtensecond)
         {
             playtensecond = false;
             SoundMgr.Instance.PlaySound(11);
